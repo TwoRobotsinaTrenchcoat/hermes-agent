@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Install test deps
-        run: pip install pytest
+        run: pip install pytest pyyaml psutil
       - name: Watchdog + pipe-drain suites (head)
         run: python -m pytest tests/test_desktop_update_windows_pipe_drain.py tests/test_desktop_update_windows_python_handoff.py tests/test_desktop_update_windows_progress.py tests/test_desktop_update_windows_timestamp.py -q --tb=short
       - name: Self-test fixture — silent stalled child is terminated (exit 124, no survivors)

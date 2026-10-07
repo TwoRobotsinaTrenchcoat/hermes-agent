@@ -12,8 +12,8 @@ name: Canary Release
 # conclusion=failure is a canary failure signal.
 
 on:
-  schedule:
-    - cron: "41 6 * * *" # daily, 06:41 UTC
+  # schedule trigger disabled in fork — the daily canary cron belongs upstream;
+  # re-add after a full sync with upstream if we want it here.
   workflow_dispatch:
 
 permissions:
